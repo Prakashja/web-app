@@ -3,8 +3,8 @@ pipeline{
         label "master"
     }
     tools{
-        maven 'maven3.8.1'
-        jdk 'java8'        
+        maven 'mavne382'
+        jdk 'java11'        
     }  
 stages{
         stage('clone'){
