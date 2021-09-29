@@ -4,9 +4,9 @@ pipeline{
     }
     tools{
         maven 'mavne382'
-        jdk 'java11'        
-    }  
-stages{
+        jdk 'java11'
+    }
+    stages{
         stage('clone'){
             steps{
                 git credentialsId: 'github', url: 'https://github.com/Prakashja/web-app.git'
@@ -29,7 +29,7 @@ stages{
                    sudo docker build -t sana03/mywebapp:1.0.0 . -f mydockerfile
                    '''
 				   }
-				   
+
 		   }
 }
     stage('docker push'){
@@ -39,8 +39,7 @@ stages{
                    sudo docker push sana03/mywebapp:1.0.0
                    '''
 				   }
-				   
+
 		   }
-}
 }
 }
