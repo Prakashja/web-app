@@ -25,7 +25,7 @@ pipeline{
         steps{
             script{
                 sh '''
-                   sudo docker build -t sana03/mywebapp:1.0.0 . -f mydockerfile
+                   sudo docker build -t mywebapp:1.0.0 . -f mydockerfile
                    '''
 				   }
 
@@ -35,7 +35,7 @@ pipeline{
         steps{
             script{
                 sh '''
-                   sudo docker push sana03/mywebapp:1.0.0
+                   sudo docker push mywebapp:1.0.0
                    '''
 				   }
 
